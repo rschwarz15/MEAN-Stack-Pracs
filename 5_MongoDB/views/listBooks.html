@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+    <head>
+        <link rel="stylesheet" href="listBooks.css">
+    </head>
+</head>
+
+<body>
+    <p>
+        <a href="/">Home</a>
+        <a href="/addBook">Add Book</a>
+        <a href="/listBooks">List Books</a>
+        <a href="/updateBook">Update Book</a>
+        <a href="/deleteBook">Delete Book</a>
+    </p>
+
+    <table id="BookTable">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date</th>
+            <th>ISBN</th>
+            <th>Summary</th>
+            <th>Action</th>
+        </tr>
+        <% for (let i=0; i<bookDb.length; i++){ %>
+        <tr>
+            <td><%= i+1 %> </td>
+            <td><%= bookDb[i].title %> </td>
+            <td><%= bookDb[i].author %> </td>
+            <td><%= bookDb[i].dop %> </td>
+            <td> <%= bookDb[i].ISBN %> </td>
+            <td><%= bookDb[i].summary %></td>
+            <td>
+                <a class="del_btn" href="/deleteBookByISBN/?ISBN=<%= bookDb[i].ISBN %>">Delete</a></td> 
+            </td>
+        </tr>
+        <%}%>
+    </table>
+    
+</body>
+</html>

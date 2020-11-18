@@ -1,0 +1,4 @@
+.floatLeft { width: 50%; float: left; }
+.floatRight {width: 50%; float: right; }
+
+.padded {margin-right: 0.2cm; margin-bottom: 0.2cm;}

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="employeesList.css">
+</head>
+
+<body>
+    <p>
+        <a href="/">Home</a>
+        <a href="/addEmployee">New Employee</a>
+    </p>
+    <h3>Employees:
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Department</th>
+                <th>Years of Experience</th>
+            </tr>
+            <% for ( let i =0; i< db.length;i++){ %>
+            <tr>
+                <td>
+                    <%= db[i].name %>
+                </td>
+                <td>
+                    <%= db[i].dob.toLocaleDateString('en-GB') %>
+                </td>
+                <td>
+                    <%= db[i].department %>
+                </td>
+                <td>
+                    <%= db[i].yoe %>
+                </td>
+            </tr>
+            <% }%>
+        </table>
+    </h3>
+</body>
+
+</html>

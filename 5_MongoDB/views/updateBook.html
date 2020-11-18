@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="updateBook.css">
+</head>
+
+<body>
+    <p>
+        <a href="/">Home</a>
+        <a href="/addBook">Add Book</a>
+        <a href="/listBooks">List Books</a>
+        <a href="/updateBook">Update Book</a>
+        <a href="/deleteBook">Delete Book</a>
+    </p>
+
+    <form action="/updatebookdata" method="POST">
+        <div class="container">
+            <h1>Update Book</h1>
+            <hr>
+            <label for="ISBN"><b>ISBN</b></label>
+            <input type="text" placeholder="13 Digit ISBN" name="ISBN" id="ISBN" required pattern="[0-9]{13}">
+            <hr>
+            <label for="title"><b>Title</b></label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" name="author" id="author" required>
+
+            <label for="dop"><b>Date of Publication</b></label>
+            <input type="date" name="dop" id="dop" required>
+
+
+            <label for="summary"><b>Summary</b></label>
+            <input type="text" name="summary" id="summary">
+            <hr>
+
+            <button type="submit" class="updatebookbtn">Update Book</button>
+        </div>
+    </form>
+</body>
+
+</html>

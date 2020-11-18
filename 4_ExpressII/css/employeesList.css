@@ -1,0 +1,15 @@
+
+/* Set format for all tables */
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+* {box-sizing: border-box}
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}

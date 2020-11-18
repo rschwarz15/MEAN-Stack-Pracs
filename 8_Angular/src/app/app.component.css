@@ -1,0 +1,17 @@
+.lab8form {
+    padding: 1cm
+}
+
+.buttons {
+    padding-left: 1cm;
+    padding-bottom: 1cm;
+}
+
+.btn{
+    margin-right: 0.1cm;
+}
+
+button:disabled {
+    background-color: gray;
+    border-color: gray;
+}

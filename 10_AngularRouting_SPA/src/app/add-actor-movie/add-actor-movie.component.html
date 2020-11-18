@@ -1,0 +1,44 @@
+<div class="section">
+    <div>
+        <table class="table table-striped floatLeft">
+            <tr>
+                <th>Name</th>
+                <th>Birth Year</th>
+                <th>Movies</th>
+                <th>Select!</th>
+            </tr>
+            <tr *ngFor="let item of actorsDB">
+                <td>{{item.name}}</td>
+                <td>{{item.bYear}}</td>
+                <td>{{item.movies.join(',')}}</td>
+                <td><button type="submit" class="btn btn-primary" (click)="onSelectUpdateActor(item)">Select</button>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-striped floatRight">
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Actors</th>
+                <th>Select!</th>
+            </tr>
+            <tr *ngFor="let item of moviesDB">
+                <td>{{item.title}}</td>
+                <td>{{item.year}}</td>
+                <td>{{item.actors.join(',')}}</td>
+                <td><button type="submit" class="btn btn-primary" (click)="onSelectUpdateMovie(item)">Select</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div *ngIf="actorsDB.length>0 && moviesDB.length>0">
+        Actor: {{this.fullName}} <br>
+        Movie: {{this.title}} <br>
+        <button type="submit" class="btn btn-primary padded" (click)="onAddMovieToActor()">Add Movie To Actor</button>
+        <button type="submit" class="btn btn-primary padded" (click)="onAddActorToMovie()">Add Actor To Movie</button>
+        <br>
+        <button type="submit" class="btn btn-primary padded" (click)="onRemoveMovieFromActor()">Remove Movie From Actor</button>
+        <button type="submit" class="btn btn-primary padded" (click)="onRemoveActorFromMovie()">Remove Actor From Movie</button>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="jumbotron">
+  <h1 class="display-4">Synthesize and Translate App</h1>
+</div>
+
+<div id="body">
+
+  <label>Your Text in English</label>
+  <input type="text" class="form-control" placeholder="Enter text" [(ngModel)]="text"><br>
+
+  <div class="form-group">
+    <label for="langauge">Select a Language:</label>
+    <div>
+      <input type="radio" value="en" name="langauge" (change)="changeLanguage($event)" checked>
+      <label>English</label>
+    </div>
+
+    <div>
+      <input type="radio" value="fr" name="langauge" (change)="changeLanguage($event)">
+      <label>French</label>
+    </div>
+
+    <div>
+      <input type="radio" value="ru" name="langauge" (change)="changeLanguage($event)">
+      <label>Russian</label>
+    </div>
+
+    <div>
+      <input type="radio" value="ar" name="langauge" (change)="changeLanguage($event)">
+      <label>Arabic</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Select a Gender:</label>
+    <div>
+      <input type="radio" value="NEUTRAL" name="gender" (change)="changeGender($event)" checked>
+      <label>Neutral</label>
+    </div>
+
+    <div>
+      <input type="radio" value="MALE" name="gender" (change)="changeGender($event)">
+      <label>Male</label>
+    </div>
+
+    <div>
+      <input type="radio" value="FEMALE" name="gender" (change)="changeGender($event)">
+      <label>Female</label>
+    </div>
+  </div>
+
+  <label for="accent">Select an Accent:</label>
+  <input [(ngModel)]="accent"><br>
+
+  <button type="button" class="btn btn-primary" (click)="onSubmitRequest()">Submit</button>
+
+  <br><br>
+
+  <audio controls id="audio" playback>
+    <source src="" type="audio/mpeg">
+  </audio>
+
+  <p>Translation: {{translatedText}}</p>
+</div>

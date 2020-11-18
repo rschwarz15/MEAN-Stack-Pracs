@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="deleteBook.css">
+</head>
+
+<body>
+    <p>
+        <a href="/">Home</a>
+        <a href="/addBook">Add Book</a>
+        <a href="/listBooks">List Books</a>
+        <a href="/updateBook">Update Book</a>
+        <a href="/deleteBook">Delete Book</a>
+    </p>
+    <form action="/deletebookdata" method="POST">
+        <div class="container">
+            <h1>Delete Book</h1>
+            <hr>
+            <label for="isbn"><b>ISBN</b></label>
+            <input type="text" placeholder="13 Digit ISBN" name="ISBN" id="ISBN" required pattern="[0-9]{13}">
+            <button type="submit" class="deletebookbtn">Delete Book</button>
+        </div>
+    </form>
+</body>
+
+</html>

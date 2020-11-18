@@ -1,0 +1,31 @@
+<div class="card">
+    <h5 class="card-header text-white bg-primary">{{pollObj.question}}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" 
+            (click)="onSelectVote(item.value)" 
+            [ngClass]="{'selected': item.value == selectedValue}" 
+            *ngFor="let item of pollObj.options">
+            {{item.text}}
+        </li>
+    </ul>
+
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-primary" (click)="onSendVote()">Vote</button>
+        <button type="button" class="btn btn-warning" (click)="onResetCounts()">Reset Votes</button>
+    </div>
+</div>
+
+<p *ngIf='voteMessage!=""'>Thanks for voting for {{voteMessage}}</p>
+
+<div style="display: block;" *ngIf="chartReady">
+    <canvas baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+    </canvas>
+</div>

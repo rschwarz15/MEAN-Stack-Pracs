@@ -1,0 +1,21 @@
+/* Set the background image */
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Turn links into buttons */
+a:link, a:visited {
+    background-color: #007FFF;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: darkblue;
+}

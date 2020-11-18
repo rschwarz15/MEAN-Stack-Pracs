@@ -1,0 +1,99 @@
+/* Set the background image */
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Turn links into buttons */
+a:link, a:visited {
+    background-color: #007FFF;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: darkblue;
+}
+
+/* Style the input form */
+
+/* Set background colour of form */
+.container {
+    background-color: white;
+    padding: 15px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=date], input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: lightgrey;
+}
+  
+input[type=text]:focus, input[type=date]:focus, input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+  
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+} 
+  
+/* Set a style for the submit/register button */
+.submitbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+  
+.submitbtn:hover {
+    opacity:1;
+}
+
+/* Style Table */
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+table tr:nth-child(even){background-color: #e4e4e4;}
+
+table tr:nth-child(odd){background-color: #ffffff;}
+  
+table tr:hover {background-color: lightblue;}
+  
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007FFF;
+    color: white;
+}
+
+/* Style logo */
+#logo { 
+    mix-blend-mode: multiply; 
+    width: 100%;    
+    filter: brightness(150%);
+}

@@ -1,0 +1,14 @@
+<div>
+	<div id="chatContainer">
+		Your message: <input [(ngModel)]="messageText" />
+		<button (click)="sendMessage()">Send</button>
+		<div class="container" *ngFor="let item of messages.slice().reverse() ">
+			<p>{{item.msg}}</p>
+			<span class="time-right">{{item.timeStamp}}</span>
+		</div>
+	</div>
+</div>
+
+<div class="jumbotron text-center">
+	<p>FIT2095 Chat Application</p>
+</div>
